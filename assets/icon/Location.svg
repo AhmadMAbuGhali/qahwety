@@ -1,0 +1,7 @@
+<svg id="Location" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <rect id="Glyphs_Toolbar_Location_background" width="28" height="28" fill="none"/>
+  <g id="Icon" transform="translate(6 5)">
+    <path id="Stroke_1" d="M7.5,0A7.432,7.432,0,0,0,0,7.364a7.274,7.274,0,0,0,2.2,5.207L7.5,18l5.3-5.429A7.274,7.274,0,0,0,15,7.364,7.432,7.432,0,0,0,7.5,0Z" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Stroke_3" d="M5,2.5A2.5,2.5,0,1,1,2.5,0,2.5,2.5,0,0,1,5,2.5Z" transform="translate(5 5)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg id="Sort" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <rect id="Glyphs_Toolbar_Sort_background" data-name="Glyphs/Toolbar/Sort background" width="28" height="28" fill="#fff"/>
+  <g id="Sort_Icon" data-name="Sort Icon" transform="translate(6 6)">
+    <path id="Line" d="M0,0V15.111L5.333,9.778" transform="translate(10.222 0.444)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Line_Copy" data-name="Line Copy" d="M0,0V15.111L5.333,9.778" transform="translate(5.778 15.556) rotate(180)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.7" height="23.28" viewBox="0 0 25.7 23.28">
+  <g id="bolt" transform="translate(0.75 0.75)">
+    <path id="Shape" d="M6.05,21.78,0,10.89,6.05,0h12.1L24.2,10.89,18.15,21.78Z" fill="none" stroke="#d8ccc0" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <circle id="Oval" cx="4.84" cy="4.84" r="4.84" transform="translate(7.26 6.05)" fill="none" stroke="#d8ccc0" stroke-miterlimit="10" stroke-width="1.5"/>
+  </g>
+</svg>

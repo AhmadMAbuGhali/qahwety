@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="gift" transform="translate(0.5 0.5)">
+    <path id="Shape" d="M0,2A1.922,1.922,0,0,1,1.835,0C4.547,0,5.5,4,5.5,4H1.835A1.921,1.921,0,0,1,0,2Z" transform="translate(1.998 0)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Shape-2" data-name="Shape" d="M5.5,2A1.922,1.922,0,0,0,3.667,0C.955,0,0,4,0,4H3.667A1.921,1.921,0,0,0,5.5,2Z" transform="translate(7.5 0)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Shape-3" data-name="Shape" d="M0,6V0" transform="translate(6 9)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Shape-4" data-name="Shape" d="M0,6V0" transform="translate(9 9)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Shape-5" data-name="Shape" d="M11,0V6H0V0" transform="translate(2 9)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <rect id="Rectangle-path" width="15" height="3" transform="translate(0 4)" fill="none" stroke="#c92026" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

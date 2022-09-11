@@ -1,0 +1,7 @@
+<svg id="Close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <rect id="Glyphs_Navigation_Close_background" data-name="Glyphs/Navigation/Close background" width="28" height="28" fill="none"/>
+  <g id="small-remove" transform="translate(8 8)">
+    <path id="Shape" d="M10.5,0,0,10.5" transform="translate(0.75 0.75)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <path id="Shape-2" data-name="Shape" d="M0,0,10.5,10.5" transform="translate(0.75 0.75)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+  </g>
+</svg>

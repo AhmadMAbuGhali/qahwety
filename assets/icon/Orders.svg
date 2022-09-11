@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17">
+  <g id="Orders_icon" data-name="Orders icon" transform="translate(0.5 0.5)">
+    <path id="Shape" d="M.933,0H13.067A1.007,1.007,0,0,1,14,1.067V14.933A1.007,1.007,0,0,1,13.067,16H.933A1.007,1.007,0,0,1,0,14.933V1.067A1.007,1.007,0,0,1,.933,0Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Shape-2" data-name="Shape" d="M0,.5H8" transform="translate(3 6.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Shape_Copy_2" data-name="Shape Copy 2" d="M0,.5H4" transform="translate(3 4)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Shape-3" data-name="Shape" d="M0,.5H8" transform="translate(3 9)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Shape_Copy" data-name="Shape Copy" d="M0,.5H8" transform="translate(3 11.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>
