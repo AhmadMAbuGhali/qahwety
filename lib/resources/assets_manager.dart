@@ -14,6 +14,9 @@ class ImageAssets {
   static const String threeStar = '$IMAGE_PATH/threeStar.png';
   static const String fourStar = '$IMAGE_PATH/fourStar.png';
   static const String fiveStar = '$IMAGE_PATH/fiveStar.png';
+  static const String threeStarwithborder = '$IMAGE_PATH/threeStarwithborder.png';
+  static const String fourStarwithborder = '$IMAGE_PATH/fourStarwithborder.png';
+  static const String fiveStarwithborder = '$IMAGE_PATH/fiveStarwithborder.png';
   static const String cupCart = '$IMAGE_PATH/cupCart.png';
   static const String pay = '$IMAGE_PATH/pay.png';
   static const String Avatar = '$IMAGE_PATH/Avatar.png';
@@ -53,6 +56,7 @@ class IconAssets{
   static const String Gift = '$ICON_PATH/Gift.svg';
   static const String multiple = '$ICON_PATH/multiple.svg';
   static const String alert = '$ICON_PATH/alert.svg';
+  static const String bullet = '$ICON_PATH/bullet.svg';
 
 
 

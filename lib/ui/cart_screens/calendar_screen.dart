@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import 'package:flutter/material.dart';
+import 'package:qahwety/ui/cart_screens/add_schedule_order.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 import 'utils.dart';
@@ -15,6 +16,7 @@ class CalendarScreen extends StatefulWidget {
 
 class _CalendarScreenState extends State<CalendarScreen> {
   CalendarFormat _calendarFormat = CalendarFormat.month;
+  DateTime _chosenDate = DateTime.now();
 
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
@@ -24,6 +26,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     super.initState();
 
     _selectedDay = _focusedDay;
+     DateTime? date = _selectedDay;
   }
 
   List<Event> _getEventsForDay(DateTime day) {
@@ -44,6 +47,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
     return TableCalendar(
+
         firstDay: kFirstDay,
         lastDay: kLastDay,
         focusedDay: _focusedDay,
@@ -81,4 +85,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
     );
   }
+
+
+
 }

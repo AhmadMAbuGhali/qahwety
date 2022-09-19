@@ -18,7 +18,7 @@ class ViewPage extends StatelessWidget {
 
       children: [
         Image.asset('$img'),
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
         Column(

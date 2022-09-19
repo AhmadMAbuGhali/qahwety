@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:qahwety/componant/button.dart';
 import 'package:qahwety/resources/assets_manager.dart';
+import 'package:qahwety/ui/home_screens/home_screen.dart';
 import 'package:qahwety/ui/nav_bar.dart';
 import 'package:qahwety/ui/register/Sign_up.dart';
 
@@ -16,9 +17,13 @@ class SignIn extends StatefulWidget {
 
   @override
   State<SignIn> createState() => _SignInState();
+
 }
 
 class _SignInState extends State<SignIn> {
+  bool emailControllerFull = false;
+  bool passwordControllerFull = false;
+  bool Fulldata = false;
   late TextEditingController emailController;
 
   late TextEditingController passwordController;
@@ -41,6 +46,7 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+            resizeToAvoidBottomInset : false,
             body: Column(
       children: [
         Container(
@@ -93,7 +99,7 @@ class _SignInState extends State<SignIn> {
             },
             controller: emailController,
             onChanged: (value) {
-              print(value);
+              isFull();
             },
             decoration: textFormDecoration.copyWith(
                 labelText: 'email', hintText: 'Enter your email'),
@@ -110,7 +116,7 @@ class _SignInState extends State<SignIn> {
             },
             controller: passwordController,
             onChanged: (value) {
-              print(value);
+              isFull();
             },
             decoration: textFormDecoration.copyWith(
                 labelText: 'Password', hintText: 'Enter your Password'),
@@ -119,8 +125,8 @@ class _SignInState extends State<SignIn> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0.w, vertical: 10.h),
           child: Button(
-            color: isFull() ? ColorManager.primary : ColorManager.gray,
-            onTap: isFull()
+            color:  Fulldata ? ColorManager.primary : ColorManager.gray,
+            onTap: Fulldata
                 ? () {
                     Get.off(NavBar());
                   }
@@ -162,11 +168,23 @@ class _SignInState extends State<SignIn> {
     )));
   }
 
-  bool isFull() {
-    if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
-      return true;
-    }
-    return false;
+  void isFull() {
+
+
+   setState(() {
+  if(emailController.text.toString().trim().isNotEmpty){
+    emailControllerFull = true;
+  }
+  if(passwordController.text.toString().trim().isNotEmpty){
+    passwordControllerFull = true;
+  }
+  if ( emailControllerFull && passwordControllerFull ) {
+    Fulldata = true;
+
+  }
+   });
+
+
   }
 }
 

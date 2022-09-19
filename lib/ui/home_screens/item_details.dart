@@ -103,7 +103,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                                 height: 12.h,
                               ),
                               Image.asset(
-                                ImageAssets.Cup,
+                                ImageAssets.cofeIcon,
                                 fit: BoxFit.cover,
                               ),
                               Padding(

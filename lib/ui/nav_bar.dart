@@ -90,12 +90,26 @@ class _NavBarState extends State<NavBar> {
                   BottomNavigationBarItem(
                       label: '',
                       icon: index == 1
-                          ? SvgPicture.asset(
-                        IconAssets.Cart,
-                        height: 25.h,
-                        width: 25.w,
-                        color: ColorManager.primary,
-                      )
+                          ? new Stack(children: <Widget>[
+                        new SvgPicture.asset(
+                          IconAssets.Cart,
+                          height: 25.h,
+                          width: 25.w,
+                          color: ColorManager.primary,
+                        ),
+                        new Positioned(
+                            top: -1.0,
+                            right: -1.0,
+                            child: new Stack(
+                              children: <Widget>[
+                                new Icon(
+                                  Icons.brightness_1,
+                                  size: 12.0,
+                                  color:  Colors.red,
+                                ),
+                              ],
+                            ))
+                      ])
                           : SvgPicture.asset(
                         IconAssets.Cart,
                         height: 25.h,

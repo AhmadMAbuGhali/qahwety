@@ -8,10 +8,21 @@ import 'package:toggle_switch/toggle_switch.dart';
 import '../../resources/assets_manager.dart';
 import '../../resources/color_manager.dart';
 
-class FilterScreen extends StatelessWidget {
+class FilterScreen extends StatefulWidget {
+
    FilterScreen({Key? key}) : super(key: key);
-  RangeValues _currentRangeValues = const RangeValues(100, 400);
+
+  @override
+  State<FilterScreen> createState() => _FilterScreenState();
+}
+
+class _FilterScreenState extends State<FilterScreen> {
+  int _value = 0;
+
+  RangeValues _currentRangeValues = const RangeValues(0, 500);
+
   TextEditingController minValue = new TextEditingController();
+
   TextEditingController maxValue = new TextEditingController();
 
   @override
@@ -25,7 +36,7 @@ class FilterScreen extends StatelessWidget {
               width: 4.w,
             ),
             GestureDetector(
-              onTap:()=> Get.to(NavBar()),
+              onTap:()=> Get.back(),
               child: SvgPicture.asset(
                 IconAssets.Close,
                 height: 25.h,
@@ -129,18 +140,16 @@ class FilterScreen extends StatelessWidget {
                 ),
                 Row(
                   children: [
+                    SizedBox(width: 30.w,),
                   Container(
-                   width: 350,
+                   width: 260,
                     child: RangeSlider(
                     values: _currentRangeValues,
                     max: 500,
                     min: 0,
                     divisions:2,
 
-                    labels: RangeLabels(
-                      _currentRangeValues.start.round().toString(),
-                      _currentRangeValues.end.round().toString(),
-                    ), onChanged: (RangeValues value) {
+                   onChanged: (RangeValues value) {
 
                     },
 
@@ -163,16 +172,54 @@ class FilterScreen extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment:MainAxisAlignment.spaceAround,
-                  children: [
-                    Image.asset(ImageAssets.threeStar),
-                    Image.asset(ImageAssets.fourStar),
-                    Image.asset(ImageAssets.fiveStar),
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap: () => setState(() => _value = 0),
+                      child: Container(
+                        height: 36,
+                        width: 97,
+                        child:  _value == 0 ? Image.asset(ImageAssets.threeStarwithborder) : Image.asset(ImageAssets.threeStar),
+                      ),
+                    ),
+                    SizedBox(width: 4),
+                    GestureDetector(
+                      onTap: () => setState(() => _value = 1),
+                      child: Container(
+                        height: 36,
+                        width: 97,
+                        child:  _value == 1 ? Image.asset(ImageAssets.fourStarwithborder) : Image.asset(ImageAssets.fourStar),
+                      ),
+                    ),
+                    SizedBox(width: 4),
+                    GestureDetector(
+                      onTap: () => setState(() => _value = 2),
+                      child: Container(
+                          height: 36,
+                          width: 97,
+                          child: _value==2? Image.asset(ImageAssets.fiveStarwithborder):Image.asset(ImageAssets.fiveStar),
+                      ),
+                    ),
                   ],
                 ),
+                // Row(
+                //   mainAxisAlignment:MainAxisAlignment.spaceAround,
+                //   children: [
+                //     Image.asset(ImageAssets.threeStar),
+                //     Image.asset(ImageAssets.fourStar),
+                //     Image.asset(ImageAssets.fiveStar),
+                //   ],
+                // ),
                 SizedBox(
                   height: 15.h,
                 ),
-                TextButton(onPressed: (){}, child: Text('Reset Filter',style: TextStyle(color: ColorManager.primary,fontSize: 14),))
+                TextButton(onPressed: (){
+                  setState(() {
+                    _value = -1;
+                  minValue = new TextEditingController();
+                    maxValue = new TextEditingController();
+                  });
+
+                }, child: Text('Reset Filter',style: TextStyle(color: ColorManager.primary,fontSize: 14),))
 
               ],
             )

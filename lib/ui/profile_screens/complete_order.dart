@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:qahwety/resources/color_manager.dart';
 
 import '../../resources/assets_manager.dart';
+import '../../resources/color_manager.dart';
 
-class OpenOrder extends StatelessWidget {
-  const OpenOrder({Key? key}) : super(key: key);
+class CompleteOrder extends StatelessWidget {
+  const CompleteOrder({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: ListView.builder(
+        body:  ListView.builder(
+
             itemCount: 5,
             shrinkWrap: true,
             itemBuilder: (context,index){

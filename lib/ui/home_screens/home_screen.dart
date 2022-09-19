@@ -22,7 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+
         child: Scaffold(
+          resizeToAvoidBottomInset : false,
       appBar: AppBar(
         leading: Row(
           children: [
@@ -52,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           GestureDetector(
             onTap: () {
-              Get.off(FilterScreen());
+              Get.to(FilterScreen());
             },
             child: SvgPicture.asset(
               IconAssets.Filter,
@@ -113,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       });
                     },
                     child: SvgPicture.asset(
-                      isGrid ? IconAssets.grid : IconAssets.List,
+                      isGrid ? IconAssets.grid : IconAssets.bullet,
                       height: 16.h,
                       width: 16.w,
                       color: ColorManager.primary,
@@ -345,7 +347,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            isGrid ? buildListView(context) : buildGridView(context),
+            isGrid ? Expanded(child: buildListView(context)) : Expanded(child: buildGridView(context)),
           ],
         ),
       ),
@@ -357,7 +359,7 @@ Widget buildListView(BuildContext context) {
   return ListView.builder(
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
-      itemCount: 5,
+      itemCount: 10,
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.only(top: 16.h, bottom: 12.h),
@@ -416,7 +418,8 @@ Widget buildGridView(
   return GridView.builder(
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
-      itemCount: 6,
+
+      itemCount: 12,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 11,

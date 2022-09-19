@@ -28,8 +28,9 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset : false,
         appBar: AppBar(
-          leading: IconButton(onPressed: ()=>Get.off(CheckoutScreen()), icon: Icon(Icons.close)),
+          leading: IconButton(onPressed: ()=>Get.back(), icon: Icon(Icons.close)),
           title: Text('Delivery Info'),
           centerTitle: true,
           actions: [
@@ -38,10 +39,12 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
 
         ),
 
-        body: Column(
-          children: [
-            Center(
-              child: TextField(
+        body: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 20.h,),
+              TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     hintText: 'Full Name',
@@ -51,15 +54,15 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                         maxWidth: 323.w),
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
 
                   )
               ),
-            ),
-            SizedBox(
-              height:16.h ,
-            ),
-            Center(
-              child: TextField(
+              SizedBox(
+                height:16.h ,
+              ),
+              TextField(
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                     hintText: 'Mobile Number',
@@ -69,15 +72,15 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                         maxWidth: 323.w),
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
 
                   )
               ),
-            ),
-            SizedBox(
-              height:16.h ,
-            ),
-            Center(
-              child: TextField(
+              SizedBox(
+                height:16.h ,
+              ),
+              TextField(
 
                   keyboardType: TextInputType.streetAddress,
                   decoration: InputDecoration(
@@ -88,15 +91,15 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                         maxWidth: 323.w),
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
 
                   )
               ),
-            ),
-            SizedBox(
-              height:16.h ,
-            ),
-            Center(
-              child: TextField(
+              SizedBox(
+                height:16.h ,
+              ),
+              TextField(
 
                   keyboardType: TextInputType.none,
                   readOnly: true,
@@ -110,44 +113,43 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                     ),
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
 
                   )
               ),
-            ),
-            SizedBox(
-              height:16.h ,
-            ),
-            Center (
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextField(
-
-                      textAlign: TextAlign.start,
-
-                      keyboardType: TextInputType.streetAddress,
-                      decoration: InputDecoration(
-                        hintText: 'Note',
-
-                        contentPadding: EdgeInsets.symmetric(vertical: 30.h),
-
-                        constraints: BoxConstraints(
-
-                          maxWidth: 323.w,
-
-
-
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
-
-                      )
-                  ),
-                ],
+              SizedBox(
+                height:16.h ,
               ),
-            ),
+              TextField(
 
-          ],
+                  textAlign: TextAlign.start,
+                  minLines: 3,
+                  maxLines: null,
+
+                  keyboardType: TextInputType.streetAddress,
+                  decoration: InputDecoration(
+                    hintText: 'Note',
+
+
+
+                    constraints: BoxConstraints(
+
+                      maxWidth: 323.w,
+
+
+
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(width: 1, color: Color(0xFFE2E2E2))),
+
+                  )
+              ),
+
+            ],
+          ),
         ),
       ),
     );

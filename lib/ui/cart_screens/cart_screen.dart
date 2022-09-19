@@ -58,7 +58,12 @@ class _CartScreenState extends State<CartScreen> {
                       key: const ValueKey(0),
                       endActionPane: ActionPane(
                         motion: ScrollMotion(),
-                        dismissible: DismissiblePane(onDismissed: (){},),
+                        dismissible: DismissiblePane(onDismissed: (){
+                          setState(() {
+                            indexnum = indexnum-1;
+                          });
+
+                        },),
                         children: [
                           SlidableAction(
                             backgroundColor: Color(0xffF5F5F5),

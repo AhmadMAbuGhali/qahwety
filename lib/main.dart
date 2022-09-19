@@ -3,14 +3,20 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:qahwety/ui/nav_bar.dart';
+
+import 'ui/splash/splash_screen.dart';
+
 
 
 void main() async {
   await ScreenUtil.ensureScreenSize();
 
-  runApp(MyApp());
-}
+  runApp(
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => MyApp(), // Wrap your app
+    ),
+  );}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -25,7 +31,9 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          useInheritedMediaQuery: true,
+          // useInheritedMediaQuery: true,
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
           color: Colors.white,
           theme: ThemeData(
 
@@ -37,7 +45,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: NavBar(),
+      child: SplashScreen(),
     );
   }
 }
